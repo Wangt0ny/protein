@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    height: 100vh;
+} 
+
+.page-wrapper {
+    padding-top: 100px;
+}
+.carousel-control-prev-icon{
+    background-image: url(../image/caret-left-fill.svg) !important
+}
+.carousel-control-next-icon{
+    background-image: url(../image/caret-right-fill.svg) !important;
+}
+
+.product-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+    border-bottom: 1px solid #d68102;
+    padding-bottom: 10px;
+}
+
+.card > a {
+    text-decoration: none;
+    color: black;
+}
+
+.item {
+    height: 100%;
+}
+
+.mycard-body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 16px;
+    height: 180px;
+    justify-content: space-between;
+}
+.card-title {
+    margin: 0;
+}
+
+.mycard-body p {
+    margin-top: auto;
+    font-size: 20px;
+}
+
+.project-btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.bi-dash, .bi-plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: inline-block; */
+    text-align: center;
+    border: none;
+    background-color: black;
+    color: #fff;
+    height: 100%;
+    /* width: 25px; */
+    padding: 9.5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.bi-dash:hover, .bi-plus:hover {
+    background-color: #d68102;
+    color: black;
+    border: 1px solid rgba(27, 27, 27, 0.5);
+}
+
+.project-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    border-top: 1px solid rgba(27, 27, 27, 0.5);
+    border-bottom: 1px solid rgba(27, 27, 27, 0.5);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.project-count:focus {
+    border: none;
+    outline: 1px solid #d68102;
+}

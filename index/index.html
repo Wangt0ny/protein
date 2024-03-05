@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protein Boy</title>
+    <link rel="icon" href="../image/LOGO藍金色.svg"><!--webLOGO-->
+    <!--style-->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../header_style.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="../footer_style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+
+        <!-- header開始 -->
+        <header class="navbar-menu">
+            <nav class="menu-bar">
+                <div class="logo"><a href="./index.html"><img src="../image/LOGO藍金色.svg" alt="logo" width="160"></a></div>
+                <input type="checkbox" id="switch">
+                <label onclick="closeCart()" class="switch" for="switch"><i class="bi bi-list"></i></label>
+                <!-- 漢堡^ -->
+                <ul class="links">
+                    <li><a href="../protein-page/protein-page.html">乳清蛋白系列<i class="bi bi-caret-down-fill"></i></a>
+                        <ul class="sub1">
+                            <li><a href="#" target="_blank">濃縮乳清蛋白</a></li>
+                            <li><a href="#" target="_blank">分離乳清蛋白</a></li>
+                            <li><a href="#" target="_blank">水解乳清蛋白</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">素食蛋白系列</a></li>
+                    <li><a href="#">高蛋白美食系列<i class="bi bi-caret-down-fill"></i></a>
+                        <ul class="sub1">
+                            <li><a href="#" target="_blank">蛋白威化餅</a></li>
+                            <li><a href="#" target="_blank">脆米蛋白棒</a></li>
+                            <li><a href="#" target="_blank">燕麥脆片</a></li>
+                            <li><a href="#" target="_blank">堅果能量棒</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" target="_blank">機能補充系列</a></li>
+                    <li><a href="#" target="_blank">搖搖杯系列</a></li>
+                    <input class="search" type="text" placeholder="搜尋...">
+                </ul>
+                
+                <div class="login">
+                    <!-- <input class="search" type="text" placeholder="搜尋..."> -->
+                    <a class="login-btn" href="../login/login.html" target="_blank"><i class="bi bi-person-fill"></i></a>
+                    <a class="login-btn" onclick="openCart()">
+                        <i class="bi bi-cart"></i>
+                        <div id="cart-amount" class="cart-amount">0</div>
+                    </a>
+                </div>
+            </nav>
+            <div id="cart-page" class="cart-page">
+                <i onclick="closeCart()" class="bi bi-x-lg"></i>
+                <div class="cart">購物車</div>
+                <div class="shopping-cart" id="shopping-cart">
+                    <!-- 自動生成 -->
+                </div>
+                <div class="cart-total" id="cart-total"></div>
+                <div class="cart-btn-group">
+                    <button class="gobuy" id="gobuy">結帳<i class="bi bi-bag-check"></i></button>
+                    <button onclick="clearCart()" class="clearcart" id="clearcart">清除購物車<i class="bi bi-trash"></i></button>
+                </div>
+            </div>
+        </header>
+        <!-- header結尾 -->
+
+        <!-- 輪播圖開始 -->
+        <div class="container">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <!-- 輪播項目，編號: 零 -->
+                    <picture>
+                      <source srcset="../image/輪播image-1/2000700-1.png" media="(min-width: 1400px)">
+                      <source srcset="../image/輪播image-1/1400700-1.png" media="(min-width: 768px)">
+                      <source srcset="../image/輪播image-1/800700-1.png" media="(min-width: 576px)">
+                      <img srcset="../image/輪播image-1/400400-1.png" class="d-block img-fluid">
+                    </picture>
+                    
+                  </div>
+                  <div class="carousel-item">
+                    <!-- 輪播項目，編號: 壹 -->
+                    <picture>
+                      <source srcset="../image/輪播image-2/2000700-2.png" media="(min-width: 1400px)">
+                      <source srcset="../image/輪播image-2/1400700-2.png" media="(min-width: 768px)">
+                      <source srcset="../image/輪播image-2/800700-2.png" media="(min-width: 576px)">
+                      <img srcset="../image/輪播image-2/400400-2.png" class="d-block img-fluid">
+                    </picture>
+                    
+                  </div>
+                  <div class="carousel-item">
+                    <!-- 輪播項目，編號: 貳 -->
+                    <picture>
+                      <source srcset="../image/輪播image-3/2000700-3.png" media="(min-width: 1400px)">
+                      <source srcset="../image/輪播image-3/1400700-3.png" media="(min-width: 768px)">
+                      <source srcset="../image/輪播image-3/800700-3.png" media="(min-width: 576px)">
+                      <img srcset="../image/輪播image-3/400400-3.png" class="d-block img-fluid">
+                    </picture>
+                    
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <!-- 輪播圖結尾 -->
+
+        <!-- 商品頁開始 -->
+
+        <div class="container mt-5">
+            <h1 class="product-title">人氣商品</h1>
+            <div class="row" id="shop">
+                
+            </div>
+            
+            <h1 class="product-title">新進商品</h1>
+            <div class="row" id="shop-new">
+                
+            </div>
+        </div>
+
+        <!-- 商品頁結尾 -->
+        
+        <!-- footer開始 -->
+        <footer>
+          <div class="container-fluid info-footer">
+              <div class="container">
+                  <div class="row justify-content-center">
+                      <div class="col-sm-4">
+                          <div class="footer-item">
+                              <div class="footer-item-title">關於Protein Boy
+                                  <div class="title-line"></div>
+                              </div>
+                              <ul class="info-link-group">
+                                  <li><a href="#">品牌故事</a></li>
+                                  <li><a href="#">品牌通路</a></li>
+                                  <li><a href="#">常見問題</a></li>
+                                  <li><a href="#">隱私權政策</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="col-sm-4">
+                          <div class="footer-item">
+                              <div class="footer-item-title">商品一覽
+                                  <div class="title-line"></div>
+                              </div>
+                              <ul class="info-link-group">
+                                  <li><a href="#">乳清蛋白系列</a></li>
+                                  <li><a href="#">素食蛋白系列</a></li>
+                                  <li><a href="#">高蛋白美食系列</a></li>
+                                  <li><a href="#">機能補充系列</a></li>
+                                  <li><a href="#">搖搖杯系列</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="col-sm-4">
+                          <div class="footer-item">
+                              <div class="footer-item-title">聯絡我們
+                                  <div class="title-line"></div>
+                              </div>
+                              <ul class="info-link-group">
+                                  <li>官方信箱 : <a href="#">proteinboy@gmail.com</a></li>
+                                  <li>客服電話 : <a href="#">0987-000-000</a></li>
+                              </ul>
+                              <div class="info-icon-grop">
+                                  <span class="info-icon"><a href="#"><i class="bi bi-facebook"></i></a></span>
+                                  <span class="info-icon"><a href="https://www.instagram.com/tonywang_0514/" target="_blank"><i class="bi bi-instagram"></i></a></span>
+                                  <span class="info-icon"><a href="#"><i class="bi bi-line"></i></a></span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="pay-icon-group">
+                      <img src="../image/pay-icon/visa.svg" alt="visa">
+                      <img src="../image/pay-icon/master.svg" alt="master">
+                      <img src="../image/pay-icon/7_eleven.svg" alt="7_eleven">
+                      <img src="../image/pay-icon/line.svg" alt="line">
+                  </div>
+                  <p class="company">2023 Protein Boy Inc. All Rights Reserved</p>
+              </div>
+          </div>
+        </footer>
+        <!-- footer結尾 -->
+    </div>
+</body>
+<script src="../data.js"></script>
+<script src="main.js"></script>
+</html>
